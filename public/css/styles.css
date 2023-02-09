@@ -1,4 +1,8 @@
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0
 }
@@ -8,30 +12,16 @@ h1 {
     color: #FFF;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    float: right;
-    margin: 0 2rem;
-}
-
-li a {
-    color: #FFF;
-    text-decoration: none;
-    font-family: 'Russo One', sans-serif;
-}
-
 h2 {
     color: #FFF;
     font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
 }
 
 h3 {
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
 }
 
 
@@ -52,7 +42,7 @@ textarea {
 }
 
 .main {
-    width: 100vw;
+    width: 100%;
     height: 95vh;
     background: #000;
     position: relative;
@@ -60,7 +50,7 @@ textarea {
 }
 
 .main img {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -76,6 +66,28 @@ textarea {
     color: #bbbbbb;
 }
 
+
+/* ---------------Back to Top Button ------------------*/
+#toTop {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: #2bb480; 
+    color: white; 
+    cursor: pointer; 
+    padding: 10px; 
+    border-radius: 10px; 
+    font-size: 1rem; 
+  }
+  
+  #toTop:hover {
+    background-color: #1c9f6d; 
+  }
+
 /* ------------------------------------------------------------------------------gnb-------------------------------------------------------------------------------*/
 
 .gnb {
@@ -87,121 +99,229 @@ textarea {
     padding-top: 2%;
     width: 30%;
     position: absolute;
-    left: 10%;
+    left: 15%;
+}
+
+#logo {
+    color: #FFF;
     font-family: 'Russo One', sans-serif;
+}
+
+#logo:hover {
+    text-decoration: none;
+    color: #d9caca;
 }
 
 .gnb-links {
     position: absolute;
-    right: 10%;
-    padding-top: 2%;
+    right: 15%;
+    padding-top: 3%;
     width: 40%;
     padding-bottom: 2%;
 }
 
 
+.gnb-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gnb-link {
+    float: right;
+    margin: 0 2rem;
+}
+
+.gnb-link a {
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Russo One', sans-serif;
+}
+
+.gnb-link a:hover {
+    text-decoration: none;
+    color: #d9caca;
+}
+
+
 /* ----------------------------------------------------------------------------Heading----------------------------------------------------------------------------*/
 
+/* -------------------"SK-Building"-is-an-Auckland-------------------- */
 .main-heading {
     width: 45%;
     position: absolute;
-    top: 15%;
-    left: 15%;
+    top: 17%;
+    left: 18%;
 }
 
-.main-body {
-    width: 100%;
-    height: 40vh;
-    margin-top: 18%;
-    padding: 0 10% 0 10%;
-    display: block;
-}
-
-.main-box {
-    width: 40rem;
-    height: 27rem;
-    text-align: center;
-    background-color: #000;
-    top: 0;
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-}
-
-.main-box img {
-    width: 100%;
-    opacity: 0.5;
-    object-fit: cover;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.box-head-left {
-    width: 80%;
-    color: #FFF;
-    position: absolute;
-    top: 60%;
-    left: 10%;
-    right: 10%
-}
-
-.box-body-left {
-    width: 80%;
-    color: #bbbbbb;
-    position: absolute;
-    top: 70%;
-    left: 10%;
-    right: 10%
-}
-
-
-.btn-check {
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:linear-gradient(to bottom, #2bb480 5%, #90d656 100%);
 	background-color:#2bb480;
-	border-radius:21px;
+	border-radius:6px;
+	border:1px solid #268a16;
 	display:inline-block;
 	cursor:pointer;
-	color:#000;
+	color:#306108;
 	font-family:Arial;
-	font-size:14px;
-	padding:11px 17px;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-    position: absolute;
-    top: 85%;
-    left: 40%;
-    right: 40%;
-    padding: 1%
+	text-shadow:0px 1px 0px #aade7c;
 }
-.btn-check:hover {
-	background-color:#5cbf2a;
+.myButton:hover {
+	background:linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+	background-color:#5cb811;
+    text-decoration: none;
 }
-.btn-check:active {
+.myButton:active {
 	position:relative;
 	top:1px;
 }
 
 
+/* -------------------Where-Slide-and-boxes-are-------------------- */
+.main-body {
+    width: 100%;
+    height: 40vh;
+    margin-top: 20%;
+    padding-left: 15%;
+    display: block;
+}
+
+
+
+/* -------------------box-image-left-------------------- */
+.slider {
+    width: 38rem;
+    height: 25rem;
+    overflow: hidden;
+    border-radius: 10px;
+    position: absolute;
+    left: 15%;
+    top: 43%;
+    background-color: #000;
+}
+
+.slides {
+    object-fit: cover;
+    width: 500%;
+    height: 25rem;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slidee {
+    width: 20%;
+    transition: 2s;
+}
+
+.slidee img {
+    width: 38rem;
+    height: 25rem;
+    opacity: 0.7;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 38rem;
+    margin-top: 23rem;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #40D3DC;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 38rem;
+    justify-content: center;
+    margin-top: 460px;;
+}
+
+.navigation-auto div {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #40D3DC;
+}
+
+
+/* -------------------Our-Goal-and-Our-Strategy-------------------- */
 .work-box1, .work-box2 {
-    width: 35%;
-    height: 20%;
-    right: calc(10% + 2rem);
+    width: 33%;
+    right: calc(15% + 2rem);
     z-index: 2;
     position: absolute;
 }
 
 .work-box1 {
-    top: 45%;
+    height: 17%;
+    top: 46.5%;
     background: #5e5e5e;
-    /* background: rgb(255,207,129);
-    background: linear-gradient(225deg, rgba(255,207,129,1) 0%, rgba(217,177,111,1) 64%, rgba(164,134,84,1) 100%); */
+    animation: slide 1s;
 }
 
 .work-box2 {
-    top: 67%;
+    height: 22%;
+    top: 66.5%;
     background: #353535;
-    /* background: rgb(197,137,64);
-    background: linear-gradient(225deg, rgba(197,137,64,1) 0%, rgba(173,121,56,1) 64%, rgba(131,92,43,1) 100%); */
+    animation: slide 2s;
 }
 
 .box-head, .box-text {
@@ -217,6 +337,61 @@ textarea {
     padding: 0 4%;
 }
 
+@keyframes slide {
+    from{
+        right: 0;
+    }
+    to {
+        right: 15%
+    }
+}
+
+/* -----------------------------------------------------------------------------------Work--------------------------------------------------------------------------*/
+
+#work {
+    background-color: #1A120B;
+    text-align: center;
+}
+
+.work-head {
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 6%;
+    font-size: 1.8rem;
+}
+
+.work-spacer {
+    border: 1px solid #bbbbbb;
+}
+ 
+.work-block {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 6%;
+}
+
+.work-heading {
+    padding: 3% 0;
+    color: #bbbbbb
+}
+
+.work-ul {
+    list-style-type: disc;
+    padding: 0;
+    color: #bbbbbb;
+    display: inline-block;
+    text-align: left;
+    padding-top: 4%;
+}
+
+.carousel {
+    padding-top: 4%;
+}
+
+.carousel-item img {
+    margin: auto;
+}
+
 
 /* -----------------------------------------------------------------------------------Contact--------------------------------------------------------------------------*/
 
@@ -229,12 +404,10 @@ textarea {
 }
 
 .contact-form {
-    width: 30%;
+    width: 40%;
     padding: 3% 5% 2% 5%;
     text-align: center;
-    position: relative;
-    left: 25%;
-    right: 25%;
+    margin: auto;
 }
 
 .form-head {
@@ -253,150 +426,1054 @@ textarea {
     width: 15%;
 }
 
+/* -----------------------------------------------------------------------------------footer--------------------------------------------------------------------------*/
+
+footer {
+    background-color: #000;
+    text-align: center;
+}
+
+.footer {
+    color: #FFF;
+    margin: 0;
+    padding: 0.5% 0;
+}
 
 
+/* -----------------------------------------------------------------------------------media--------------------------------------------------------------------------*/
 
+/* ----------------------------------------------1-media-1---------------------------------------------- */
+@media screen and (max-width: 1800px) {
+    .slider {
+        width: 36rem;
+        height: 23rem;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        left: 15%;
+        top: 43%;
+        background-color: #000;
+    }
 
+    .slider {
+        width: 36rem;
+        height: 23rem;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        left: 15%;
+        top: 43%;
+        background-color: #000;
+    }
+    
+    .slides {
+        object-fit: cover;
+        width: 500%;
+        height: 23rem;
+        display: flex;
+    }
 
+    .slidee img {
+        width: 36rem;
+        height: 23rem;
+        opacity: 0.7;
+    }
+    
+    .navigation-manual {
+        position: absolute;
+        width: 36rem;
+        margin-top: 21rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 4px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
 
+    .work-box1 {
+        height: 15%;
+        top: 46%;
+        background: #5e5e5e;
+        animation: slide 1s;
+    }
+
+    .work-box2 {
+        height: 20%;
+        top: 65.5%;
+        background: #353535;
+        animation: slide 2s;
+    }
+}  */
+
+/* ----------------------------------------------2-media-2----------------------------------------------*/
 @media screen and (max-width: 1700px) {
-    .main-body {
+    .main {
         width: 100%;
-        height: 40vh;
-        margin-top: 22%;
-        padding: 0 10% 0 10%;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 1580px) {
-    .main-body {
-        width: 100%;
-        height: 40vh;
-        margin-top: 22%;
-        padding: 0 10% 0 10%;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 1540px) {
-    .main-box {
-        width: 35rem;
-        height: 25rem;
-        text-align: center;
-        background-color: #000;
-        top: 0;
+        height: 90vh;
+        background: #000;
         position: relative;
         overflow: hidden;
-        z-index: 2;
     }
-    .work-box1, .work-box2 {
-        width: 35%;
-        height: 15%;
-        right: calc(10% + 2rem);
-        z-index: 2;
-        position: absolute;
-    }
-    
-    .work-box1 {
-        top: 35%;
-        background: #89837d;
-        /* background: rgb(255,207,129);
-        background: linear-gradient(225deg, rgba(255,207,129,1) 0%, rgba(217,177,111,1) 64%, rgba(164,134,84,1) 100%); */
-    }
-    
-    .work-box2 {
-        top: 58%;
-        background: #625f59;
-        /* background: rgb(197,137,64);
-        background: linear-gradient(225deg, rgba(197,137,64,1) 0%, rgba(173,121,56,1) 64%, rgba(131,92,43,1) 100%); */
-    }
-}
 
-@media screen and (max-width: 1450px) {
-    .main-heading {
-        width: 45%;
-        position: absolute;
-        top: 10%;
-        left: 15%;
+    h2 {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8rem;
     }
-    .main-box {
-        width: 30rem;
-        height: 22rem;
-        text-align: center;
+
+    .slider {
+        width: 34rem;
+        height: 23rem;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        left: 15%;
+        top: 43%;
         background-color: #000;
-        top: 0;
+    }
+
+    .slider {
+        width: 32rem;
+        height: 21rem;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        left: 15%;
+        top: 43%;
+        background-color: #000;
+    }
+    
+    .slides {
+        object-fit: cover;
+        width: 500%;
+        height: 21rem;
+        display: flex;
+    }
+
+    .slidee img {
+        width: 32rem;
+        height: 21rem;
+        opacity: 0.7;
+    }
+    
+    .navigation-manual {
+        position: absolute;
+        width: 32rem;
+        margin-top: 19rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 3px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .work-box1 {
+        height: 15%;
+        top: 49%;
+        background: #5e5e5e;
+        animation: slide 1s;
+    }
+
+    .work-box2 {
+        height: 20%;
+        top: 66%;
+        background: #353535;
+        animation: slide 2s;
+    }
+
+    .box-head {
+        padding: 3%;
+        font-size: 1.5rem;
+    }
+    
+    .box-text {
+        padding: 0 3%;
+        font-size: 1rem;
+    }
+} 
+
+/* ----------------------------------------------3-media-3----------------------------------------------*/
+@media screen and (max-width: 1660px) {
+    .main {
+        width: 100%;
+        height: 87vh;
+        background: #000;
         position: relative;
         overflow: hidden;
-        z-index: 2;
     }
-    .work-box1, .work-box2 {
-        width: 35%;
-        height: 15%;
-        right: calc(10% + 2rem);
-        z-index: 2;
+
+    h2 {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.6rem;
+    }
+
+    .slider {
+        width: 32rem;
+        height: 21rem;
+        overflow: hidden;
+        border-radius: 10px;
         position: absolute;
+        left: 15%;
+        top: 40%;
+        background-color: #000;
+    }
+
+    .slides {
+        object-fit: cover;
+        width: 500%;
+        height: 21rem;
+        display: flex;
+    }
+
+    .slidee img {
+        width: 32rem;
+        height: 21rem;
+        opacity: 0.7;
     }
     
+    .navigation-manual {
+        position: absolute;
+        width: 32rem;
+        margin-top: 19rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 3px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
     .work-box1 {
-        top: 32%;
-        background: #89837d;
-        /* background: rgb(255,207,129);
-        background: linear-gradient(225deg, rgba(255,207,129,1) 0%, rgba(217,177,111,1) 64%, rgba(164,134,84,1) 100%); */
+        height: 15%;
+        top: 48%;
+        background: #5e5e5e;
+        animation: slide 1s;
+    }
+
+    .work-box2 {
+        height: 20%;
+        top: 66%;
+        background: #353535;
+        animation: slide 2s;
+    }
+
+    .box-head {
+        padding: 4%;
+        font-size: 1.2rem;
     }
     
-    .work-box2 {
-        top: 50%;
-        background: #625f59;
-        /* background: rgb(197,137,64);
-        background: linear-gradient(225deg, rgba(197,137,64,1) 0%, rgba(173,121,56,1) 64%, rgba(131,92,43,1) 100%); */
+    .box-text {
+        padding: 0 4%;
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        width: 45%;
+        padding: 3% 5% 2% 5%;
+        text-align: center;
+        margin: auto;
     }
 }
 
-@media screen and (max-width: 1310px) {
-    .main-heading {
-        width: 45%;
-        position: absolute;
-        top: 10%;
-        left: 15%;
-    }
-    .main-body {
+/* ----------------------------------------------4-media-4----------------------------------------------*/
+@media screen and (max-width: 1500px) {
+    .main {
         width: 100%;
-        height: 40vh;
-        margin-top: 25%;
-        padding: 0 10% 0 10%;
-        display: block;
+        height: 83vh;
+        background: #000;
+        position: relative;
+        overflow: hidden;
     }
-    .main-box {
+
+    h2 {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.6rem;
+    }
+
+    .slider {
         width: 28rem;
-        height: 20rem;
-        text-align: center;
-        background-color: #000;
-        top: 0;
-        position: relative;
+        height: 21rem;
         overflow: hidden;
-        z-index: 2;
-    }
-    .work-box1, .work-box2 {
-        width: 35%;
-        height: 15%;
-        right: calc(10% + 2rem);
-        z-index: 2;
+        border-radius: 10px;
         position: absolute;
+        left: 15%;
+        top: 37%;
+        background-color: #000;
+    }
+
+    .slides {
+        object-fit: cover;
+        width: 500%;
+        height: 21rem;
+        display: flex;
+    }
+
+    .slidee img {
+        width: 32rem;
+        height: 21rem;
+        opacity: 0.7;
     }
     
+    .navigation-manual {
+        position: absolute;
+        width: 32rem;
+        margin-top: 19rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 2px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
     .work-box1 {
-        top: 32%;
-        background: #89837d;
-        /* background: rgb(255,207,129);
-        background: linear-gradient(225deg, rgba(255,207,129,1) 0%, rgba(217,177,111,1) 64%, rgba(164,134,84,1) 100%); */
+        height: 18%;
+        top: 46%;
+        background: #5e5e5e;
+        animation: slide 1s;
+    }
+
+    .work-box2 {
+        height: 23%;
+        top: 65%;
+        background: #353535;
+        animation: slide 2s;
+    }
+
+    .box-head {
+        padding: 3%;
+        font-size: 1.2rem;
     }
     
-    .work-box2 {
-        top: 50%;
-        background: #625f59;
-        /* background: rgb(197,137,64);
-        background: linear-gradient(225deg, rgba(197,137,64,1) 0%, rgba(173,121,56,1) 64%, rgba(131,92,43,1) 100%); */
+    .box-text {
+        padding: 0 3%;
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        width: 45%;
+        padding: 3% 5% 2% 5%;
+        text-align: center;
+        margin: auto;
     }
 }
 
+/* ----------------------------------------------5-media-5----------------------------------------------*/
+@media screen and (max-width: 1400px) {
+    .main {
+        width: 100%;
+        height: 80vh;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+    h2 {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.4rem;
+    }
+
+    .slider {
+        width: 27rem;
+        height: 18rem;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        left: 15%;
+        top: 35%;
+        background-color: #000;
+    }
+
+    .slides {
+        object-fit: cover;
+        width: 500%;
+        height: 18rem;
+        display: flex;
+    }
+
+    .slidee img {
+        width: 27rem;
+        height: 18rem;
+        opacity: 0.7;
+    }
+    
+    .navigation-manual {
+        position: absolute;
+        width: 27rem;
+        margin-top: 16rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 2px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .work-box1 {
+        height: 14%;
+        top: 44%;
+        background: #5e5e5e;
+        animation: slide 1s;
+    }
+
+    .work-box2 {
+        height: 19%;
+        top: 61%;
+        background: #353535;
+        animation: slide 2s;
+    }
+
+    .box-head {
+        padding: 4%;
+        font-size: 1.2rem;
+    }
+    
+    .box-text {
+        padding: 0 4%;
+        font-size: 0.8rem;
+    }
+
+    .contact-form {
+        width: 45%;
+        padding: 3% 5% 2% 5%;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+/* ----------------------------------------------6-media-6----------------------------------------------*/
+@media screen and (max-width: 1300px) {
+    .main {
+        width: 100%;
+        height: 70vh;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+    h2 {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .slider {
+        width: 23rem;
+        height: 15rem;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        left: 15%;
+        top: 33%;
+        background-color: #000;
+    }
+
+    .slides {
+        object-fit: cover;
+        width: 500%;
+        height: 15rem;
+        display: flex;
+    }
+
+    .slidee img {
+        width: 23rem;
+        height: 15rem;
+        opacity: 0.7;
+    }
+    
+    .navigation-manual {
+        position: absolute;
+        width: 23rem;
+        margin-top: 13rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 2px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .work-box1 {
+        height: 12%;
+        top: 48%;
+        background: #5e5e5e;
+        animation: slide 1s;
+    }
+
+    .work-box2 {
+        height: 18%;
+        top: 62%;
+        background: #353535;
+        animation: slide 2s;
+    }
+
+    .box-head {
+        padding: 2%;
+        font-size: 1rem;
+    }
+    
+    .box-text {
+        padding: 0 2%;
+        font-size: 0.8rem;
+    }
+
+    .contact-form {
+        width: 60%;
+        padding: 3% 5% 2% 5%;
+        text-align: center;
+        margin: auto;
+    }
+} 
+
+/* ----------------------------------------------7-media-7----------------------------------------------*/
+@media screen and (max-width: 1110px) {
+    .main {
+        width: 100%;
+        height: 65vh;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+    h2 {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+    }
+
+    .slider {
+        width: 18rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        left: 15%;
+        top: 28%;
+        background-color: #000;
+    }
+
+    .slides {
+        object-fit: cover;
+        width: 500%;
+        height: 15rem;
+        display: flex;
+    }
+
+    .slidee img {
+        width: 23rem;
+        height: 15rem;
+        opacity: 0.7;
+    }
+    
+    .navigation-manual {
+        position: absolute;
+        width: 23rem;
+        margin-top: 11rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 0;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .work-box1 {
+        height: 9%;
+        top: 44%;
+        background: #5e5e5e;
+        animation: slide 1s;
+    }
+
+    .work-box2 {
+        height: 11%;
+        top: 58%;
+        background: #353535;
+        animation: slide 2s;
+    }
+
+    .box-head {
+        padding: 2%;
+        font-size: 0.8rem;
+    }
+    
+    .box-text {
+        padding: 0 2%;
+        font-size: 0.4rem;
+    }
+
+    .contact-form {
+        width: 45%;
+        padding: 3% 5% 2% 5%;
+        text-align: center;
+        margin: auto;
+    }
+} 
+
+
+/* -----------------------------------------------media-ipad----------------------------------------------*/
+@media screen and (max-width: 821px) {
+    .main {
+        width: 100%;
+        height: 39vh;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #logo {
+        color: #FFF;
+        font-family: 'Russo One', sans-serif;
+        font-size: 2rem;
+    }
+
+    .gnb-link {
+        float: right;
+        margin: 0 0.8rem;
+    }
+
+    .gnb-link a {
+        color: #FFF;
+        text-decoration: none;
+        font-family: 'Russo One', sans-serif;
+        font-size: 1rem;
+    }
+
+    h2 {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.8rem;
+    }
+
+    .main-heading {
+        width: 45%;
+        position: absolute;
+        top: 20%;
+        left: 18%;
+    }
+
+    .myButton {
+        box-shadow:inset 0px 1px 0px 0px #caefab;
+        background:linear-gradient(to bottom, #2bb480 5%, #90d656 100%);
+        background-color:#2bb480;
+        border-radius:6px;
+        border:1px solid #268a16;
+        display:inline-block;
+        cursor:pointer;
+        color:#306108;
+        font-family:Arial;
+        font-size:9px;
+        font-weight:bold;
+        padding:3px 12px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #aade7c;
+    }
+    
+    .slider {
+        width: 18rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        left: 15%;
+        top: 18%;
+        background-color: #000;
+    }
+
+    .slides {
+        object-fit: cover;
+        width: 500%;
+        height: 15rem;
+        display: flex;
+    }
+
+    .slidee img {
+        width: 18rem;
+        height: 12rem;
+        opacity: 0.7;
+    }
+    
+    .navigation-manual {
+        position: absolute;
+        width: 18rem;
+        margin-top: 11rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 0;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .work-box1 {
+        width: 30%;
+        height: 11%;
+        top: 50%;
+        background: #5e5e5e;
+        animation: slide 1s;
+    }
+
+    .work-box2 {
+        width: 30%;
+        height: 16%;
+        top: 65%;
+        background: #353535;
+        animation: slide 2s;
+    }
+
+    .box-head {
+        padding: 2%;
+        font-size: 0.8rem;
+    }
+    
+    .box-text {
+        padding: 0 2%;
+        font-size: 0.4rem;
+    }
+
+    .contact-form {
+        width: 80%;
+        padding: 3% 5% 2% 5%;
+        text-align: center;
+        margin: auto;
+    }
+} 
+
+/* -----------------------------------------------media-ipad-mini---------------------------------------------*/
+@media screen and (max-width: 770px) {
+    .main {
+        width: 100%;
+        height: 39vh;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #logo {
+        color: #FFF;
+        font-family: 'Russo One', sans-serif;
+        font-size: 2rem;
+    }
+
+    .gnb-link {
+        float: right;
+        margin: 0 0.8rem;
+    }
+
+    .gnb-link a {
+        color: #FFF;
+        text-decoration: none;
+        font-family: 'Russo One', sans-serif;
+        font-size: 1rem;
+    }
+
+    h2 {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.8rem;
+    }
+
+    .main-heading {
+        width: 45%;
+        position: absolute;
+        top: 20%;
+        left: 18%;
+    }
+
+    .myButton {
+        box-shadow:inset 0px 1px 0px 0px #caefab;
+        background:linear-gradient(to bottom, #2bb480 5%, #90d656 100%);
+        background-color:#2bb480;
+        border-radius:6px;
+        border:1px solid #268a16;
+        display:inline-block;
+        cursor:pointer;
+        color:#306108;
+        font-family:Arial;
+        font-size:6px;
+        font-weight:bold;
+        padding:2px 10px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #aade7c;
+    }
+    
+    .slider {
+        display: none;
+        width: 14rem;
+        height: 9rem;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        left: 15%;
+        top: 20%;
+        background-color: #000;
+    }
+
+    .slides {
+        object-fit: cover;
+        width: 500%;
+        height: 9rem;
+        display: flex;
+    }
+
+    .slidee img {
+        width: 14rem;
+        height: 9rem;
+        opacity: 0.7;
+    }
+    
+    .navigation-manual {
+        position: absolute;
+        width: 14rem;
+        margin-top: 7.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 0;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .work-box1 {
+        width: 30%;
+        height: 11%;
+        top: 53%;
+        background: #5e5e5e;
+        animation: slide 1s;
+    }
+
+    .work-box2 {
+        width: 30%;
+        height: 16%;
+        top: 68%;
+        background: #353535;
+        animation: slide 2s;
+    }
+
+    .box-head {
+        padding: 2%;
+        font-size: 0.8rem;
+    }
+    
+    .box-text {
+        padding: 0 2%;
+        font-size: 0.4rem;
+    }
+
+    .contact-form {
+        width: 80%;
+        padding: 3% 5% 2% 5%;
+        text-align: center;
+        margin: auto;
+    }
+} 
+
+/* -----------------------------------------------media-phone---------------------------------------------*/
+@media screen and (max-width: 420px) {
+    .main {
+        width: 100%;
+        height: 26vh;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+
+
+    #logo {
+        color: #FFF;
+        font-family: 'Russo One', sans-serif;
+        font-size: 1rem;
+    }
+
+    .gnb-link {
+        float: right;
+        margin: 0 0.8rem;
+    }
+
+    .gnb-link a {
+        color: #FFF;
+        text-decoration: none;
+        font-family: 'Russo One', sans-serif;
+        font-size: 0.6rem;
+    }
+
+    h2 {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.4rem;
+        margin: 0;
+    }
+
+    .main-heading {
+        width: 60%;
+        position: absolute;
+        top: 25%;
+        left: 18%;
+    }
+
+    .myButton {
+        box-shadow:inset 0px 1px 0px 0px #caefab;
+        background:linear-gradient(to bottom, #2bb480 5%, #90d656 100%);
+        background-color:#2bb480;
+        border-radius:6px;
+        border:1px solid #268a16;
+        display:inline-block;
+        cursor:pointer;
+        color:#306108;
+        font-family:Arial;
+        font-size:5px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #aade7c;
+    }
+    
+    .slider {
+        width: 8rem;
+        height: 5rem;
+        overflow: hidden;
+        border-radius: 3px;
+        position: absolute;
+        left: 15%;
+        top: 13%;
+        background-color: #000;
+    }
+
+    .slides {
+        object-fit: cover;
+        width: 500%;
+        height: 8rem;
+        display: flex;
+    }
+
+    .slidee img {
+        width: 8rem;
+        height: 5rem;
+        opacity: 0.7;
+    }
+    
+    .navigation-manual {
+        position: absolute;
+        width: 8rem;
+        margin-top: 7rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #40D3DC;
+        padding: 0;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .work-box1 {
+        width: 55%;
+        height: 16%;
+        top: 53%;
+        background: #5e5e5e;
+        animation: slide 1s;
+    }
+
+    .work-box2 {
+        width: 55%;
+        height: 19%;
+        top: 72%;
+        background: #353535;
+        animation: slide 2s;
+    }
+
+    .box-head {
+        padding: 2%;
+        font-size: 0.4rem;
+    }
+    
+    .box-text {
+        padding: 0 2%;
+        font-size: 0.35rem;
+    }
+
+    .contact-form {
+        width: 80%;
+        padding: 3% 5% 2% 5%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .work-head {
+        font-size: 1rem;
+    }
+
+    .work-heading {
+        font-size: 1rem;
+    }
+
+    .work-ul li {
+        font-size: 0.7rem;
+    }
+
+    #toTop {
+        display: none; 
+        position: fixed; 
+        bottom: 20px; 
+        right: 30px; 
+        z-index: 99; 
+        border: none; 
+        outline: none; 
+        background-color: #2bb480; 
+        color: white; 
+        cursor: pointer; 
+        padding: 2px; 
+        border-radius: 10px; 
+        font-size: 0.5rem; 
+    }
+
+    .btn-form {
+        margin-top: 4%;
+        padding: 1.5%;
+        width: 25%;
+    }
+
+} 
