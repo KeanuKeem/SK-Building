@@ -9,6 +9,8 @@ setInterval(function () {
 }, 5000);
 
 
+
+
 let mybutton = document.getElementById("toTop");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -26,4 +28,15 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+
+
+
+function openNav() {
+  document.getElementById("myNav").style.height = "30%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
 }
