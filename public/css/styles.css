@@ -1,10 +1,9 @@
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    margin: 0
+    margin: 0;
 }
 
 h1 {
@@ -43,14 +42,13 @@ textarea {
 
 .main {
     width: 100%;
-    height: 95vh;
-    background: #000;
+    height: 90vh;
+    background: #1A120B;
     position: relative;
     overflow: hidden;
 }
 
 .main img {
-
     position: absolute;
     top: 0;
     left: 0;
@@ -79,16 +77,19 @@ textarea {
     background-color: #2bb480; 
     color: white; 
     cursor: pointer; 
-    padding: 10px; 
+    width: 30px;
+    padding: 5px; 
     border-radius: 10px; 
     font-size: 1rem; 
   }
   
-  #toTop:hover {
+#toTop:hover {
     background-color: #1c9f6d; 
   }
 
-/* ------------------------------------------------------------------------------gnb-------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------gnb-------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .gnb {
     display: block;
@@ -128,6 +129,10 @@ textarea {
 .gnb-link {
     float: right;
     margin: 0 2rem;
+}
+
+.gnb-link:first-child {
+    margin: 0;
 }
 
 .gnb-link a {
@@ -187,14 +192,16 @@ textarea {
     visibility: hidden;
 }
 
-
-/* ----------------------------------------------------------------------------Heading----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------Heading----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* -------------------"SK-Building"-is-an-Auckland-------------------- */
 .main-heading {
     position: absolute;
     top: 20%;
     left: 18%;
+    width: 54%;
 }
 
 .myButton {
@@ -223,151 +230,32 @@ textarea {
 	top:1px;
 }
 
-
-/* -------------------Where-Slide-and-boxes-are-------------------- */
-.main-body {
-    width: 100%;
-    height: 40vh;
-    margin-top: 20%;
-    padding-left: 15%;
-    display: block;
-}
-
-
-
-/* -------------------box-image-left-------------------- */
-.slide-col {
-    position: absolute;
-    left: 15%;
-    top: 43%;
-}
-
-.slider {
-    width: 38rem;
-    height: 25rem;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #000;
-}
-
-.slides {
-    object-fit: cover;
-    width: 500%;
-    height: 25rem;
-    display: flex;
-}
-
-.slides input {
-    display: none;
-}
-
-.slidee {
-    width: 20%;
-    transition: 2s;
-}
-
-.slidee img {
-    width: 38rem;
-    height: 25rem;
-    opacity: 0.7;
-}
-
-.navigation-manual {
-    position: absolute;
-    width: 38rem;
-    margin-top: 22rem;
-    display: flex;
-    justify-content: center;
-}
-
-.manual-btn {
-    border: 2px solid #40D3DC;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.manual-btn:not(:last-child) {
-    margin-right: 40px;
-}
-
-.manual-btn:hover {
-    background: #40D3DC;
-}
-
-#radio1:checked ~ .first {
-    margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-    margin-left: -20%;
-}
-
-#radio3:checked ~ .first {
-    margin-left: -40%;
-}
-
-#radio4:checked ~ .first {
-    margin-left: -60%;
-}
-
-.navigation-auto {
-    position: absolute;
-    display: flex;
-    width: 38rem;
-    justify-content: center;
-    margin-top: 460px;;
-    visibility: hidden;
-}
-
-.navigation-auto div {
-    border: 2px solid #40D3DC;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-}
-
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-}
-
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-    background: #40D3DC;
-}
-
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-    background: #40D3DC;
-}
-
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-    background: #40D3DC;
-}
-
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-    background: #40D3DC;
-}
-
-
 /* -------------------Our-Goal-and-Our-Strategy-------------------- */
-.work-box1, .work-box2 {
-    right: calc(15% + 2rem);
-    z-index: 2;
+
+.main-body {
     position: absolute;
+    width: 50%;
+    top: 55%;
+    left: 18%;
+    right: 18%;
+    display: flex;
+    margin: auto;
 }
 
-.work-box1 {
-    height: 17%;
-    top: 46.5%;
+.work-box1, .work-box2 {
+    z-index: 2;
+    padding: 3%;
+    margin: 1%;
+}
+
+.work-box1 {  
     background: #5e5e5e;
-    animation: slide 1s;
+    animation: slide1 1.5s;
 }
 
 .work-box2 {
-    height: 22%;
-    top: 66.5%;
     background: #353535;
-    animation: slide 2s;
+    animation: slide2 1.5s;
 }
 
 .box-head, .box-text {
@@ -376,23 +264,31 @@ textarea {
 }
 
 .box-head {
-    padding: 4%;
+    padding-bottom: 4%;
 }
 
-.box-text {
-    padding: 0 4%;
-}
 
-@keyframes slide {
+@keyframes slide1 {
     from{
-        right: 0;
+        left: -15%;
     }
     to {
-        right: 15%
+        left: 0
     }
 }
 
-/* -----------------------------------------------------------------------------------Work--------------------------------------------------------------------------*/
+@keyframes slide2 {
+    from{
+        right: -15%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------Work--------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #work {
     background-color: #1A120B;
@@ -438,20 +334,21 @@ textarea {
     margin: auto;
 }
 
-
-/* -----------------------------------------------------------------------------------Contact--------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------Contact-------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #contact {
     margin: 0;
-    height: 100vh;
-    background-color: #353535;
     font-family: 'Poppins', sans-serif;
     color: #FFF;
+    background-color: #353535;
+    padding: 3% 5% 5% 5%;
 }
 
 .contact-form {
     width: 40%;
-    padding: 3% 5% 2% 5%;
+    padding-bottom: 10%;
     text-align: center;
     margin: auto;
 }
@@ -474,7 +371,9 @@ textarea {
     font-size: 0.7rem;
 }
 
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* -----------------------------------------------------------------------------------footer--------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 footer {
     background-color: #000;
@@ -483,537 +382,246 @@ footer {
 
 .footer {
     color: #FFF;
-    margin: 0;
+    margin: auto 0;
     padding: 0.5% 0;
 }
 
 
-/* -----------------------------------------------------------------------------------media--------------------------------------------------------------------------*/
-
-@media screen and (max-width: 1820px) {
-    .slider {
-        width: 35rem;
-        height: 23rem;
-        overflow: hidden;
-        border-radius: 10px;
-        background-color: #000;
-    }
-    
-    .slides {
-        object-fit: cover;
-        width: 500%;
-        height: 23rem;
-        display: flex;
-    }
-    
-    .slidee img {
-        width: 35rem;
-        height: 23rem;
-        opacity: 0.7;
-    }
-    
-    .navigation-manual {
-        position: absolute;
-        width: 35rem;
-        margin-top: 20rem;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .manual-btn {
-        border: 2px solid #40D3DC;
-        padding: 5px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 1s;
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------media--------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-height: 1081px) {
+    .main {
+        height: 75vh;
     }
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (min-height: 1400px) {
+    .main {
+        height: 65vh;
+    }
+}
+
+/* @media screen and (max-height: 784px) {
+    .main {
+        height: 150vh;
+    }
+
     h2 {
-        color: #FFF;
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.3rem;
-    }
-
-    .slider {
-        width: 32rem;
-        height: 22rem;
-        overflow: hidden;
-        border-radius: 10px;
-        background-color: #000;
-    }
-    
-    .slides {
-        object-fit: cover;
-        width: 500%;
-        height: 22rem;
-        display: flex;
-    }
-    
-    .slidee img {
-        width: 32rem;
-        height: 22rem;
-        opacity: 0.7;
-    }
-    
-    .navigation-manual {
-        position: absolute;
-        width: 32rem;
-        margin-top: 20rem;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .manual-btn {
-        border: 2px solid #40D3DC;
-        padding: 5px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 1s;
-    }
-}
-
-@media screen and (max-width: 1550px) {
-    .slider {
-        width: 29rem;
-        height: 20rem;
-        overflow: hidden;
-        border-radius: 10px;
-        background-color: #000;
-    }
-    
-    .slides {
-        object-fit: cover;
-        width: 500%;
-        height: 20rem;
-        display: flex;
-    }
-    
-    .slidee img {
-        width: 29rem;
-        height: 20rem;
-        opacity: 0.7;
-    }
-    
-    .navigation-manual {
-        position: absolute;
-        width: 29rem;
-        margin-top: 18rem;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .manual-btn {
-        border: 2px solid #40D3DC;
-        padding: 4px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 1s;
-    }
-}
-
-@media screen and (max-width: 1420px) {
-    .slider {
-        width: 26rem;
-        height: 19rem;
-        overflow: hidden;
-        border-radius: 10px;
-        background-color: #000;
-    }
-
-    .slides {
-        object-fit: cover;
-        width: 500%;
-        height: 19rem;
-        display: flex;
-    }
-    
-    .slidee img {
-        width: 26rem;
-        height: 19rem;
-        opacity: 0.7;
-    }
-    
-    .navigation-manual {
-        position: absolute;
-        width: 26rem;
-        margin-top: 17rem;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .manual-btn {
-        border: 2px solid #40D3DC;
-        padding: 3px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 1s;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    h2 {
-        color: #FFF;
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
     .main-heading {
-        position: absolute;
-        top: 12%;
-        left: 15%;
-    }
-    
-    .slide-col {
-        position: absolute;
+        top: 17%;
         left: 25%;
-        top: 30%;
     }
 
-    .slider {
-        width: 35rem;
-        height: 19rem;
-        overflow: hidden;
-        border-radius: 10px;
-        background-color: #000;
+    .main-body {
+        width: 100%;
+        top: 35%;
+        left: 25%;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media screen and (max-height: 560px) {
+    .main {
+        height: 200vh;
     }
 
-    .slides {
-        object-fit: cover;
-        width: 500%;
-        height: 19rem;
-        display: flex;
-    }
-    
-    .slidee img {
-        width: 35rem;
-        height: 19rem;
-        opacity: 0.7;
-    }
-    
-    .navigation-manual {
-        position: absolute;
-        width: 35rem;
-        margin-top: 17rem;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .manual-btn {
-        border: 2px solid #40D3DC;
-        padding: 2px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 1s;
+    .main-heading {
+        top: 15%;
     }
 
-    .work-box1 {
-        height: 26%;
-        top: 73%;
-        left: 15%;
-        background: #5e5e5e;
-        animation: slide 1s;
-    }
-    
-    .work-box2 {
-        height: 26%;
-        top: 73%;
-        right: 15%;
-        background: #353535;
-        animation: slide 2s;
+    .h2 {
+        font-size: 1.2rem;
     }
 
-    .box-head {
-        padding: 2%;
+    .main-body {
+        top: 38%;
     }
-    
-    .box-text {
-        padding: 0 2%;
+} */
+
+
+@media screen and (max-width: 1400px) {
+    h2 {
+        font-size: 1.8rem;
     }
 
     .contact-form {
         width: 50%;
-        padding: 3% 5% 2% 5%;
-        text-align: center;
-        margin: auto;
     }
+
+    .btn-form {
+        width: 20%;
+    }
+
 }
 
-@media screen and (max-width: 900px) {
-    h2 {
+@media screen and (max-width: 995px) {
+    .overlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        overflow-y: hidden;
+        transition: 0.5s;
+        visibility: visible;
+    }
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    .mob-menu {
+        visibility: visible;
+        opacity: 1;
+        position: absolute;
+        top: 2.5%;
+        right: 15%;
         color: #FFF;
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.2rem;
+    }
+
+    .gnb-links {
+        visibility: hidden;
     }
 
     .main-heading {
-        position: absolute;
-        top: 12%;
-        left: 15%;
-    }
-    
-    .slide-col {
-        position: absolute;
-        left: 20%;
-        top: 33%;
+        right: 18%;
+        width: 65%;
     }
 
-    .slider {
-        width: 25rem;
-        height: 15rem;
-        overflow: hidden;
-        border-radius: 10px;
-        background-color: #000;
+    h2 {
+        font-size: 1.4rem;
     }
 
-    .slides {
-        object-fit: cover;
-        width: 500%;
-        height: 15rem;
-        display: flex;
-    }
-    
-    .slidee img {
-        width: 25rem;
-        height: 15rem;
-        opacity: 0.7;
-    }
-    
-    .navigation-manual {
-        position: absolute;
-        width: 25rem;
-        margin-top: 13rem;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .manual-btn {
-        border: 2px solid #40D3DC;
-        padding: 2px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 1s;
+    .main-body {
+        width: 50%;
+        top: 46.5%;
+        display: block;
+        margin: auto;
     }
 
-    .work-box1 {
-        height: 28%;
-        top: 70%;
-        left: 15%;
-        background: #5e5e5e;
-        animation: slide 1s;
+    .work-box1, .work-box2 {
+        margin-bottom: 8%;
     }
-    
-    .work-box2 {
-        height: 28%;
-        top: 70%;
-        right: 15%;
-        background: #353535;
-        animation: slide 2s;
+}
+
+@media screen and (max-width: 600px) {
+    #logo {
+        font-size: 1.6rem;
+    }
+
+    .main-heading {
+        right: 18%;
+        width: 65%;
+        top: 15%;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    .main-body {
+        top: 42%;
+        width: 60%;
     }
 
     .box-head {
-        padding: 2%;
         font-size: 1rem;
     }
-    
+
     .box-text {
-        padding: 0 2%;
-        font-size: 0.8rem;
-    }
-
-    .overlay {
-        height: 0%;
-        width: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0, 0.9);
-        overflow-y: hidden;
-        transition: 0.5s;
-        visibility: visible;
-    }
-
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-
-    .mob-menu {
-        visibility: visible;
-        opacity: 1;
-        position: absolute;
-        top: 2%;
-        right: 15%;
-        color: #FFF;
-    }
-
-    .gnb-links {
-        visibility: hidden;
-    }
-
-    .logo {
-        padding-top: 2%;
-        position: absolute;
-        left: 15%;
+        font-size: 0.85rem;
     }
 
     .contact-form {
         width: 60%;
-        padding: 3% 5% 2% 5%;
-        text-align: center;
-        margin: auto;
     }
 
     .btn-form {
-        margin-top: 4%;
-        padding: 1.5%;
-        width: 20%;
-        font-size: 0.7rem;
+        width: 24%;
     }
-
 }
 
-
-@media screen and (max-width: 580px) {
-    h2 {
-        color: #FFF;
-        font-family: 'Poppins', sans-serif;
-        font-size: 0.8rem;
-    }
-
+@media screen and (max-width: 440px) {
     .main-heading {
-        position: absolute;
-        top: 12%;
-        left: 15%;
-    }
-    
-    .slide-col {
-        position: absolute;
-        left: 15%;
-        top: 33%;
+        top: 15%;
     }
 
-    .slider {
-        width: 20rem;
-        height: 12rem;
-        overflow: hidden;
-        border-radius: 10px;
-        background-color: #000;
+    h2 {
+        font-size: 1.1rem;
     }
 
-    .slides {
-        object-fit: cover;
-        width: 500%;
-        height: 12rem;
-        display: flex;
-    }
-    
-    .slidee img {
-        width: 20rem;
-        height: 12rem;
-        opacity: 0.7;
-    }
-    
-    .navigation-manual {
-        position: absolute;
-        width: 20rem;
-        margin-top: 10.5rem;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .manual-btn {
-        border: 2px solid #40D3DC;
-        padding: 1.5px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 1s;
-    }
-
-    .work-box1 {
-        height: 24%;
-        top: 64%;
-        left: 15%;
-        background: #5e5e5e;
-        animation: slide 1s;
-    }
-    
-    .work-box2 {
-        height: 24%;
-        top: 64%;
-        right: 15%;
-        background: #353535;
-        animation: slide 2s;
+    .main-body {
+        top: 42%;
     }
 
     .box-head {
-        padding: 2%;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
-    
+
     .box-text {
-        padding: 0 2%;
-        font-size: 0.6rem;
-    }
-
-    .overlay {
-        height: 0%;
-        width: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0, 0.9);
-        overflow-y: hidden;
-        transition: 0.5s;
-        visibility: visible;
-    }
-
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-
-    .mob-menu {
-        visibility: visible;
-        opacity: 1;
-        position: absolute;
-        top: 2%;
-        right: 15%;
-        color: #FFF;
-    }
-
-    .gnb-links {
-        visibility: hidden;
-    }
-
-    .logo {
-        padding-top: 2%;
-        position: absolute;
-        left: 15%;
-    }
-
-    .contact-form {
-        width: 60%;
-        padding: 3% 5% 2% 5%;
-        text-align: center;
-        margin: auto;
+        font-size: 0.85rem;
     }
 
     .btn-form {
-        margin-top: 4%;
-        padding: 1.5%;
-        width: 40%;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    h2 {
+        font-size: 0.9rem;
+    }
+
+    .main-body {
+        top: 46%;
+    }
+
+    .box-head {
+        font-size: 0.8rem;
+    }
+
+    .box-text {
         font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .mob-menu {
+        top: 3.25%;
+    }
+
+    h2 {
+        font-size: 0.75rem;
+    }
+
+    .myButton {
+        font-size: 0.63rem;
+    }
+
+    .main-body {
+        top: 48%;
+    }
+
+    .box-head {
+        font-size: 0.7rem;
+    }
+
+    .box-text {
+        font-size: 0.63rem;
+    }
+
+    .btn-form {
+        width: 35%;
     }
 }
